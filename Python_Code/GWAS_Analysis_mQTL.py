@@ -1,4 +1,4 @@
-#This code perfoms the GWAS analysis using PLINK
+#This code performs the GWAS analysis using PLINK
 import subprocess
 plink2 = "/Volumes/ATUL_6TB/Tools/./plink2"
 plink = "/Volumes/ATUL_6TB/Tools/plink_mac_20230116/./plink"
