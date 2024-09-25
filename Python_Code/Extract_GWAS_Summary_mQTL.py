@@ -6,7 +6,7 @@ f_m = open ("/Volumes/ATUL_6TB/Work/Projects/mQTL_pQTL/Metabolomics/mQTL_Results
 f_m.write ("ID_1" + "\t" + "Metabolite" + "\t" + "CHROM" + "\t" + "POS" + "\t" + "ID" + "\t" + "REF" + "\t" + "ALT" + "\t" + "PROVISIONAL_REF?" + "\t" + "A1" + "\t" + "OMITTED" + "\t" + "A1_FREQ" + "\t" + "TEST" + "\t" + "OBS_CT" + "\t" + "BETA" + "\t" + "SE" + "\t" + "L95" + "\t" + "U95" + "\t" + "T_STAT" + "\t" + "P" + "\t" + "ERRCODE"  + "\n")
 with open ("/Volumes/ATUL_6TB/Work/Projects/mQTL_pQTL/Metabolomics/Metabolite_File_Name.txt", 'r') as metabolite_file_name:
     for metabolite_name in metabolite_file_name:
-        GWAS_Summary = "Results/" + metabolite_name.strip ()
+        GWAS_Summary = "/Volumes/ATUL_6TB/Data/mQTL_pQTL_Summary_Statistics/Metabolomics/" + metabolite_name.strip ()
         metabolite = metabolite_name.split (".")
         with open ("/Volumes/ATUL_6TB/Work/Projects/mQTL_pQTL/Metabolomics/Metabolite_Name_Coding.txt", 'r') as metabolite_coded_name_file:
             for line in metabolite_coded_name_file:
@@ -22,7 +22,7 @@ with open ("/Volumes/ATUL_6TB/Work/Projects/mQTL_pQTL/Metabolomics/Metabolite_Fi
             for clump_line in clumping:
                 clump_line_list = clump_line.split ("\t")
                 lead_SNPs.append (clump_line_list[2] )
-        with open ("/Volumes/ATUL_6TB/Work/Projects/mQTL_pQTL/Metabolomics/Results/" + str (metabolite_name.strip ()), 'r') as metabolite_file:
+        with open ("/Volumes/ATUL_6TB/Data/mQTL_pQTL_Summary_Statistics/Metabolomics/" + str (metabolite_name.strip ()), 'r') as metabolite_file:
             summary_line = metabolite_file.readline ()
             for summary_line in metabolite_file:
                 summary_line_list = summary_line.split ("\t")
